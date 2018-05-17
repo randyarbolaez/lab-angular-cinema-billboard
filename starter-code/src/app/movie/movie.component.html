@@ -1,0 +1,9 @@
+<div class="movie-container">
+  <div class="movie-div" *ngFor="let movie of this.theService.movie">
+    <h4>ROOM {{movie.room}}</h4>
+    <img [src]="movie.poster" [alt]="movie.title">
+    <a [routerLink]="['movie', movie.id]">
+      <h4>{{movie.title}}</h4>
+    </a>
+  </div>
+</div>
